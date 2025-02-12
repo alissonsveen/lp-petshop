@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>LP petshop</title>
+</head>
+<body>
+    <div id="logo">
+        <img src="assets/images/logo.svg" alt="logo do mundo pet">
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <div class="title-wrapper">
+                <h1>Sua agenda</h1>
+                <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+            </div>
+            <div id="input-date">
+                <i><img src="assets/icons/Calendar-Minimalistic--Streamline-Solar.svg" alt="ícone de calendário"></i>
+                <input type="date" name="date" id="date">
+            </div>
+        </div>
+    </div>
+    <div class="schedules">
+        <section class="schedule-period">
+            <header>
+                <img src="assets/icons/Sun-Fog--Streamline-Solar.svg" alt="Manhã">
+                <strong>Manhã</strong>
+                <h3>09h-12h</h3>
+            </header>
+            <ul id="period-morning" class="period">
+            </ul>
+        </section>
+
+        <section class="schedule-period">
+            <header>
+                <img src="assets/icons/Cloud-Sun-4--Streamline-Solar.svg" alt="Tarde">
+                <strong>Tarde</strong>
+                <h3>13h-18h</h3>
+            </header>
+            <ul id="period-afternoon" class="period">
+            </ul>
+        </section>
+        <section class="schedule-period">
+            <header>
+                <img src="assets/icons/Moon-Stars--Streamline-Solar.svg" alt="Noite">
+                <strong>Noite</strong>
+                <h3>19h-21h</h3>
+            </header>
+            <ul id="period-night" class="period">
+            </ul>
+        </section> 
+    </div>
+    <div class="schedule-button">
+        <button type="button" id="schedule-btn">NOVO AGENDAMENTO</button>
+        <div class="wrapper-mobile"></div>
+    </div>
+    <div class="blur-background"></div>
+    <form>
+        <div class="header-form">
+            <div class="cancel-icon-mobile">
+                <img src="assets/icons/icon-cancel.svg" alt="icon de user">
+            </div>
+            <span>Agende um atendimento</span>
+            <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        </div>
+        <fieldset class="name">
+            <legend>Nome do tutor</legend>
+             <img src="assets/icons/User--Streamline-Solar.svg" alt="icon de user">
+            <input type="text" name="name"  placeholder="Seu nome" id="name">
+        </fieldset>
+        
+        <fieldset class="pet">
+            <legend>Nome do pet</legend>
+            <img src="assets/icons/Pet-Paw--Streamline-Core.svg" alt="icon de pet">
+            <input type="text" name="pet" placeholder="Nome do pet" id="pet">
+        </fieldset>
+        
+     
+        <fieldset class="number">
+            <legend>Telefone</legend>
+             <img src="assets/icons/Phone--Streamline-Solar.svg" alt="icon de telefone">
+            <input type="number" name="number" placeholder="(00) 0 0000-0000" id="number">
+        </fieldset>
+
+        <fieldset class="info">
+            <legend>Descrição do serviço</legend>
+            <textarea name="info" placeholder="Banho e tosa" id="info"></textarea>
+        </fieldset>
+
+    <div class="times-schedules">
+        <fieldset class="date">
+            <img src="assets/icons/Calendar-Minimalistic--Streamline-Solar.svg" alt="icon de Relógio">
+            <legend>Data</legend>
+            <input type="date" name="date" id="date-form">
+        </fieldset>
+
+        <fieldset class="hour">
+            <img src="assets/icons/Clock-Circle--Streamline-Solar.svg" alt="">
+            <legend>Hora</legend>
+            <input type="time" name="hour" id="hour" required="true">
+        </fieldset>
+    </div>
+
+        <button class="btn-form">AGENDAR</button>
+    </form>
+
+ <script src="main.js"></script>
+</body>
+</html>
