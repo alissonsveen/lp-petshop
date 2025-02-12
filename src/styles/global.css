@@ -1,0 +1,123 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* Content */
+    --content-primary: #FFFFFF;
+    --content-secondary: #98959D;
+    --content-tertiary: #666666;
+    --content-brand: #9282FA;
+    
+    /* Background */
+    --background: #14151D;
+    --background-primary: #151515;
+    --background-secondary: #1E1E1E;
+    --background-tertiary: #23242C;
+    --background-brand: #9282FA;
+    --background-highlights: #BDB4FA;
+    
+    /* Border */
+    --border-primary: #3E3C41;
+    --border-secondary: #86818C;
+    --border-brand: #9282FA;
+    --border-divisor: #353339;
+
+    /* Accent */
+    --accent-blue: #027DF0;
+    --accent-blue-light: #16487A;
+    --accent-yellow: #F0DC02;
+    --accent-yellow-light: #756E1B;
+    --accent-orange: #F09102;
+    --accent-orange-light: #75501B;
+
+    /* inter Tight */
+    --ff-inter-t: "Inter Tight", serif;
+    --title: 700 1.5rem/32px var(--ff-inter-t);
+
+    /* inter */
+    --ff-inter: "Inter", serif;
+    --p-md: 500 0.875rem/24px var(--ff-inter);
+    --p-sm: 500 0.75rem/16px var(--ff-inter);
+    --label-lg: 700 1rem/24px var(--ff-inter);
+    --label-md: 700 0.875rem/24px var(--ff-inter);
+    --label-sm: 700 0.75rem/16px var(--ff-inter);
+    --link: 500 0.75rem/16px var(--ff-inter);
+    --text-input: 400 1rem/150% var(--ff-inter)
+
+}
+
+body {
+    background-color: var(--background);
+}
+
+
+#logo {
+    width: 153px;
+    height: 48px;
+
+    padding: 12px 20px;
+
+    position: relative;
+    background: #2E2C30;
+    border-radius: 0px 0px 12px 0px;
+
+}
+
+#date::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+
+    background-image: url(../assets/icons/calendar-arrow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 20px;
+    height: 20px;
+
+    margin-right: -1.6rem;
+    margin-bottom: 0.2rem;
+}
+
+#date-form::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+
+    background-image: url(../assets/icons/calendar-arrow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 20px;
+    height: 20px;
+
+    margin-left: -0.10rem;
+    margin-bottom: 0.2rem;
+}
+
+input[type*="time"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+
+    background-image: url(../assets/icons/calendar-arrow.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 20px;
+    height: 20px;
+
+    position: relative;
+    left: 3.75rem;
+    bottom: 2px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+   margin: 0;
+}
+
+@media (max-width: 1100px) {
+    body {
+        overflow-x: hidden;
+    }
+}

@@ -1,0 +1,222 @@
+.schedules {
+    box-sizing: border-box;
+    
+    width: 711px;
+    height: 48px;
+    
+    margin-inline: auto;
+    padding-top: 32px;
+    z-index: -1;
+}
+
+.schedules header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--border-divisor);
+
+    padding:  0.75rem 1.25rem;
+}
+
+.schedule-period {
+    background-color: var(--background-tertiary);
+    border-radius: 0.625rem;
+    margin-block: 12px;
+}
+
+
+.schedule-period header strong{
+    flex: 1;
+    font: var(--label-lg);
+    color: var(--content-primary);
+}
+
+.schedule-period header h3{ 
+    font: var(--label-lg);
+    color: var(--content-secondary);
+}
+
+.schedule-period header img {
+    margin-right: 12px;
+}
+
+.schedule-period li h2 {
+   margin-right: 1rem;
+   margin-left: 1.25rem;
+
+   font: var(--label-md);
+   color: var(--content-primary);
+}
+.schedule-period span:nth-child(2) {
+    font: var(--label-sm);
+    color: var(--content-primary);
+
+    margin-right: 1rem;
+
+    & strong {
+        font: var(--p-sm);
+        color: var(--content-secondary);
+    }
+}
+.schedule-period span:nth-child(3) {
+    overflow:  hidden;
+    word-wrap: break-word; 
+
+    font: var(--p-sm);
+    color: var(--content-secondary);
+}
+
+.cancel-a {
+    text-decoration: none;
+
+    margin-right: 20px;
+    margin-left: 20px;
+
+    font: var(--link);
+    color: var(--content-tertiary);
+
+    &:hover {
+        color: var(--content-primary);
+        text-decoration: underline;
+    }
+}
+
+.schedule-period ul {
+    list-style: none;
+    padding-bottom: 40px;
+    
+  }
+  .schedule-period ul li {
+    width: 711px;
+    height: 5.5rem;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+  }
+  
+  .schedule-period ul li span {
+    flex: 1;
+  }
+
+  .schedule-button button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 24px;
+
+    font: var(--label-lg);
+    white-space: nowrap;
+    color: #050505;
+    font-weight: 700;
+
+    
+    position: absolute;
+    width: 218px;
+    height: 48px;
+    right: 30px;
+    bottom: 33px;
+    
+    cursor: pointer;
+    background: var(--background-brand);
+    box-shadow: 0px 0px 40px rgba(146, 130, 250, 0.3);
+    border-radius: 8px;
+    border: 0;
+
+    &:hover {
+        background: var(--background-highlights);
+    }
+  }
+
+  #divider {
+    width: 90%;
+    margin-top: -1rem;
+    margin-inline: auto;
+    border-bottom: 0.6px solid var(--border-divisor);
+  }
+
+  .wrapper-mobile {
+    display: none;
+  }
+
+  @media (max-width: 1100px) {
+    .schedules {
+        width: 350px;
+        margin-top: 2.625rem;
+   
+    }
+    .schedule-period {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2px;
+
+        padding: 1.25rem;
+
+        width: 350px;
+    }
+    .schedule-period ul {
+       padding-bottom: 5.625rem; 
+    }
+
+    .schedule-period ul li span {
+        flex: 1 !important;
+    }
+
+    .schedule-period li {
+        margin-left: -15px !important;
+    }
+
+
+
+    .schedule-period span:nth-child(3) {
+        position: absolute;
+        padding-top: 40px;
+        margin-left: 20px;
+    }
+
+    .cancel-a {
+        position: absolute;
+        margin-left: 41%;
+        width: 100%;
+        padding-top: 100px;
+    }
+
+    #divider {
+        width: 45%;
+        margin-left: 0;
+        margin-top: 1.5rem;
+    }
+
+    .schedule-button button {
+        position: absolute;
+        top: 1520px;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .wrapper-mobile {
+        display: block;
+
+        width: 417px;
+        height: 84px;
+
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        top: 1500px;
+
+        background: var(--background-tertiary);
+        border: 1px solid var(--background-tertiary);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+    }
+  }

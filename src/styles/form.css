@@ -1,0 +1,285 @@
+form  {
+    box-sizing: border-box;
+
+    padding-inline: 2.5rem;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.75rem;
+
+    width: 477px;
+    height: 716px;
+    padding-block: 23.75rem;
+
+    position: absolute;
+    left: calc(50% - 477px/2 + 0.5px);
+    top: calc(41% - 716px/2 + 0.5px);
+    background: var(--background-tertiary);
+    border-radius: 12px;
+    z-index: 2;
+}
+
+.blur-background {
+    position: absolute;
+    width: 1366px;
+    height: 200%;
+    display: none;
+    
+    left: calc(50% - 1366px/2);
+    top: 0px;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+    backdrop-filter: blur(6px);
+}
+
+
+.header-form {
+    & span {
+        font: var(--title);
+        color: var(--content-primary);
+    }
+
+    & p {
+        font: var(--p-md);
+        color: var(--content-secondary);
+    }
+}
+
+
+fieldset {
+    position: relative;
+    max-width: 397px;
+    border: 0;
+}
+
+fieldset input:hover {
+    border: 1px solid var(--border-secondary);
+}
+
+fieldset input:focus {
+    border: 1px solid var(--border-brand);
+}
+
+
+fieldset img {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%); 
+
+    z-index: 1; 
+}
+
+fieldset input {
+    all: unset;
+
+    padding: 12px 12px;
+    padding-left: 40px;
+
+    border: 1px solid var(--border-primary);
+}
+
+fieldset .number {
+    background-color: black;
+}
+
+legend {
+    font: var(--label-md);
+    color: var(--content-primary);
+}
+
+input[type*="text"] {
+  width: 397px;
+
+  border-radius: 8px;
+
+  font: var(--text-input);
+  color: var(--content-secondary);
+
+  box-sizing: border-box;
+}
+
+ 
+input[type*="number"] {
+    box-sizing: border-box;
+    width: 397px;
+
+    font: var(--text-input);
+    color: var(--content-secondary);
+
+    border-radius: 8px;
+}
+
+textarea {
+    all: unset;
+
+    width: 397px;
+    height: 83px;
+    padding: 12px 12px;
+
+    font: var(--text-input);
+    color: var(--content-secondary);
+
+    box-sizing: border-box;
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+}
+textarea:hover {
+    border: 1px solid var(--border-secondary);
+}
+textarea:focus {
+    border: 1px solid var(--border-brand);
+}
+
+.times-schedules input {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding-left: 2.375rem;
+
+    font: var(--text-input);
+    color: var(--content-secondary);
+
+    width: 190px;
+    height: 48px;
+
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+
+}
+input[type*="time"] {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding-right: 4.375rem;
+
+    font: var(--text-input);
+    color: var(--content-secondary);
+
+   
+    width: 190px;
+    height: 48px;
+    border-radius: 8px;
+}
+
+.times-schedules {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-form {
+    margin-left: auto;
+    padding: 12px 24px;
+
+    width: 123px;
+    height: 48px;
+    
+    font: var(--label-lg);
+    color: #050505;
+
+    background: var(--content-brand);
+    border-radius: 8px;
+    border: 0;
+
+    &:hover {
+        cursor: pointer;
+        background: var(--background-highlights);
+    }
+}
+
+legend {
+    padding-bottom: 4px;
+}
+.cancel-icon-mobile {
+    display: none;
+}
+
+@media (max-width: 1100px) {
+form {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    padding: 1.25rem;
+    padding-block: 28.125rem;
+    
+    width: 350px;
+    height: 837px;
+
+    z-index: 2;
+    position: absolute;
+    left: calc(50% - 350px/2);
+    top: 4rem;
+ }
+
+.blur-background {
+    width: 390px;
+    height: 1388px;
+
+    position: absolute;
+    left: calc(50% - 390px/2);
+    top: 50px;
+
+    z-index: 1;
+    backdrop-filter: blur(6px);
+}
+
+.cancel-icon-mobile {
+    display: flex;
+
+    position: absolute;
+    right: 17px;
+    top: 17px;
+}
+
+ input[type*="text"] {
+    width: 310px;
+ }
+
+ input[type*="number"] {
+    width: 310px;
+ }
+ textarea {
+    width: 310px;
+ }
+ .times-schedules {
+    flex-direction: column;
+    width: 310px;
+ }
+ input[type*="time"] {
+    width: 310px;
+    display: flex;
+    justify-content: start;
+ }
+
+ input[type*="date"] {
+    width: 310px;
+ }
+
+ #date-form::-webkit-calendar-picker-indicator{
+    position: relative;
+    left: 120px;
+ }
+
+ #hour::-webkit-calendar-picker-indicator {
+    position: relative;
+    left: 186px;
+ }
+ & .hour {
+    img {
+        position: absolute;
+        bottom: 200px;
+    }
+ }
+ 
+}
