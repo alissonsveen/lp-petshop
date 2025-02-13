@@ -7,7 +7,7 @@ Este é um projeto de landing page para um sistema de agendamento de um petshop,
 - ⚙️ **HTML** - Estrutura da página
 - 🎨 **CSS** - Estilização e responsividade
 - 🔬 **JavaScript** - Interatividade da página
-- 💻 **API REST** - Consumo de dados para agendamentos
+- 💻 **API** - Consumo de dados para agendamentos
 
 ## 📝 Funcionalidades
 
